@@ -2,15 +2,15 @@
 Coursera Google Data Analytics Capstone Project
 
 ### Project Objective
-As a junior analyst at a fictional bike-share company in Chicago (Cyclistic) I am being tasked to assist the marketing analysts assess their data to solve one of 3 current issues:
+As a junior analyst at a fictional bike-share company in Chicago (Cyclistic) I am being tasked to assist the marketing analysts by assessing their data to solve one of 3 current issues:
 - How do annual members and casual riders use Cyclistic bikes differently?
 
-I will be using data (12 months of ridership logs - July 2022-June 2023 provided by
+I will be using data (12 months of ridership logs - July 2022-June 2023 provided by Motivate International (license)
 
 The tools I will use to analyze data and present my findings will be BigQuery by Google (SQL), Tableau, GitHub, and Google Slides.
 
 
-I will be utilizing the anaysis procedure outline in the Google Data Analytics system: *Ask, Prepare, Process, Analyze, Share, Act*
+I will be utilizing the anaysis procedure outlined in the Google Data Analytics system: *Ask, Prepare, Process, Analyze, Share, Act*
 
 ## ASK
 In this step we consider our stakeholders and clearly define the business task.
@@ -32,11 +32,39 @@ Data Anomalies/Patterns to check for
 
 Unaswerable Questions (but questions I would like to ask my stakeholders for further clarity)
 - how do prices differ for each segment
-- 
+- Why do 
 
 ## PROCESS
 1. Combine Data into one table
-2. Clean data
+``CREATE TABLE `cyclistic-427407.jul23_jun24_cyclistic.combined_cyclistic` AS (
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.01_24_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.02_24_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.03_24_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.04_24_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.05_24_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.06_23_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.07_23_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.08_23_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.09_23_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.10_23_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.11_23_cyclistic`
+  UNION ALL
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.12_23_cyclistic`
+);``
+  
+3. Clean data
+
+4. Staion names - public rack remove
 
 ```SELECT SDIIOKPF```
 
