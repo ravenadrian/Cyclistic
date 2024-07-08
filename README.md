@@ -5,19 +5,19 @@ Coursera Google Data Analytics Capstone Project
 As a junior analyst at a fictional bike-share company in Chicago (Cyclistic) I am being tasked to assist the marketing analysts by assessing their data to solve one of 3 current issues:
 - How do annual members and casual riders use Cyclistic bikes differently?
 
-I will be using data (12 months of ridership logs - July 2022-June 2023 provided by Motivate International (license)
+I will be using data from (12 months of ridership logs - July 2022-June 2023 provided by Motivate International (license)
 
 The tools I will use to analyze data and present my findings will be BigQuery by Google (SQL), Tableau, GitHub, and Google Slides.
 
 
-I will be utilizing the anaysis procedure outlined in the Google Data Analytics system: *Ask, Prepare, Process, Analyze, Share, Act*
+I will be utilizing the 6-step procedure outlined in the Google Data Analytics method: *Ask, Prepare, Process, Analyze, Share, Act*
 
 ## ASK
 In this step we consider our stakeholders and clearly define the business task.
 The stakeholders here include Cyclistic executives, and, more acutely, the marketing analyst team and Lily Moreno (Marketing Manager). She has delivered a very direct task which was defined in the objective: Find all ways that annual member activity differs from casual rider activty, relevant to finding ways to covert casual members through marketing tactics.
 
 ## PREPARE
-Questions to ask
+In this step we confirm the consistency and accuracy of the data and its formatting to prepare for Questions to ask
 - Overall, what is the total member rides vs casual rides compared to % of each segment
 - Can we add zip codes to our data to define rides by geographic location?
 - How do average ride times for members
@@ -36,9 +36,9 @@ Unaswerable Questions (but questions I would like to ask my stakeholders for fur
 
 ## PROCESS
 1. Combine Data into one table
-``CREATE TABLE `cyclistic-427407.jul23_jun24_cyclistic.combined_cyclistic` AS (
-
-   SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.01_24_cyclistic`
+```
+CREATE TABLE `cyclistic-427407.jul23_jun24_cyclistic.combined_cyclistic` AS (
+  SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.01_24_cyclistic`
     UNION ALL
   SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.02_24_cyclistic`
   UNION ALL
@@ -61,7 +61,8 @@ Unaswerable Questions (but questions I would like to ask my stakeholders for fur
   SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.11_23_cyclistic`
   UNION ALL
   SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.12_23_cyclistic`
-);``
+);
+```
   
 3. Clean data
 
