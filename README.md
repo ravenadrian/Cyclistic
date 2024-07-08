@@ -37,7 +37,8 @@ Unaswerable Questions (but questions I would like to ask my stakeholders for fur
 ## PROCESS
 1. Combine Data into one table
 ``CREATE TABLE `cyclistic-427407.jul23_jun24_cyclistic.combined_cyclistic` AS (
-    SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.01_24_cyclistic`
+
+   SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.01_24_cyclistic`
     UNION ALL
   SELECT * FROM `cyclistic-427407.jul23_jun24_cyclistic.02_24_cyclistic`
   UNION ALL
