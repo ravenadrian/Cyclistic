@@ -17,7 +17,7 @@ In this step we consider our stakeholders and clearly define the business task.
 The stakeholders here include Cyclistic executives, and, more acutely, the marketing analyst team and Lily Moreno (Marketing Manager). She has delivered a very direct task which was defined in the objective: Find all ways that annual member activity differs from casual rider activty, relevant to finding ways to covert casual members through marketing tactics.
 
 ## PREPARE
-In this step we cobmine the individual files and then confirm the consistency and accuracy of the data and its formatting to prepare for processing.
+In this step we combine the 12 monthly individual files and then confirm the consistency and accuracy of the data and its formatting to prepare for processing.
 To combine data into one table I used the ``UNION`` function as shown:
 ```
 CREATE TABLE `jul23_jun24_cyclistic.combined_cyclistic` AS (
@@ -45,9 +45,15 @@ CREATE TABLE `jul23_jun24_cyclistic.combined_cyclistic` AS (
   UNION ALL
   SELECT * FROM `jul23_jun24_cyclistic.12_23_cyclistic`
 );
+--This returns 5,743,278 records
 ```
 
-Exploratory Stage - getting familiar with my the data.
+Now that all the datat is in one table, we can begin the Exploratory Stage - getting familiar with the data and its anomalies.
+1. Check for null vallues and remove records
+- min and max ride time
+- check for duplicate rows
+- check attribute lengths for consistency
+- 
 - Overall, what is the total member rides vs casual rides compared to % of each segment
 - Can we add zip codes to our data to define rides by geographic location?
 - How do average ride times for members
@@ -55,10 +61,7 @@ Exploratory Stage - getting familiar with my the data.
 - How does ridership change by month of the year and weekdays/weekends by segment?
   
 Data Anomalies/Patterns to check for
-- null vallues
-- min and max ride time
-- check for duplicate rows
-- check attribute lengths for consistency
+
 
 Unaswerable Questions (but questions I would like to ask my stakeholders for further clarity)
 - how do prices differ for each segment
